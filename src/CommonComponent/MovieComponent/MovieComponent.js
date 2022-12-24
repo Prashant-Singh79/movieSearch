@@ -25,12 +25,13 @@ const MovieComponent = () => {
     fetchData();
 
     window.scrollTo(0, 0);
-  }, []);
+  });
 
   return (
     <div style={{backgroundColor:"black"}} className="movie">
       <div className="movie__intro">
         <img
+        alt="movie"
           className="movie__backdrop"
           src={`https://image.tmdb.org/t/p/original${
             currentMovieDetail ? currentMovieDetail.backdrop_path : ""
@@ -41,6 +42,8 @@ const MovieComponent = () => {
         <div className="movie__detailLeft">
           <div className="movie__posterBox">
             <img
+        alt="movie"
+
               className="movie__poster"
               src={`https://image.tmdb.org/t/p/original${
                 currentMovieDetail ? currentMovieDetail.poster_path : ""
