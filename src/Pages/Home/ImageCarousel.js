@@ -2,17 +2,12 @@ import React from 'react'
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import { Grid} from '@mui/material';
-import { makeStyles } from '@mui/styles';
+
 import "./Home.css"
 import {Link} from "react-router-dom"
 import { Star } from '@mui/icons-material';
 
 
-const useStyle = makeStyles({
-posterImage:{
-    backgroundColor:"red"
-}
-})
 
 function truncateString(str, num) {
     if (str.length > num) {
@@ -23,7 +18,7 @@ function truncateString(str, num) {
   }
 
 function ImageCarousel({imageData}) {
-    const classes = useStyle()
+   
   return (
     <Grid>
         <Carousel 
