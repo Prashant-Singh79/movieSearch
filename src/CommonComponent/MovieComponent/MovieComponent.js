@@ -98,6 +98,7 @@ const MovieComponent = () => {
         <div style={{color:"white"}} className="movie__heading">Useful Links</div>
         {currentMovieDetail && currentMovieDetail.homepage && (
           <a
+          rel="noreferrer"
             href={currentMovieDetail.homepage}
             target="_blank"
             style={{ textDecoration: "none" }}
@@ -111,6 +112,7 @@ const MovieComponent = () => {
         )}
         {currentMovieDetail && currentMovieDetail.imdb_id && (
           <a
+          rel="noreferrer"
             href={"https://www.imdb.com/title/" + currentMovieDetail.imdb_id}
             target="_blank"
             style={{ textDecoration: "none" }}
@@ -132,6 +134,7 @@ const MovieComponent = () => {
               {company.logo_path && (
                 <span className="productionCompanyImage">
                   <img
+                  alt="movie"
                     className="movie__productionComapany"
                     src={
                       "https://image.tmdb.org/t/p/original" + company.logo_path

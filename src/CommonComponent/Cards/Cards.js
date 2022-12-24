@@ -1,4 +1,4 @@
-import { Grid, Skeleton } from "@mui/material";
+import {Skeleton } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Cards.css";
@@ -30,6 +30,7 @@ function Cards({ movie }) {
           ) : (
             <>
               <img
+              alt="movie"
                 className="cards__img"
                 src={`https://image.tmdb.org/t/p/original${
                   movie ? movie.poster_path : ""
